@@ -8,7 +8,7 @@ class Restaurant extends Component {
     }
 
   render() {
-    console.log(this.props.restaurant.map(x => x.text))
+    //console.log(this.props.restaurant.map(x => x.text))
     const { restaurant } = this.props;
 
     return (
