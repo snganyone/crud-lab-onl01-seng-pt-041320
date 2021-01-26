@@ -19,7 +19,7 @@ class ReviewsContainer extends Component {
 const mapStateToProps = ({ reviews }) => ({ reviews });
 
 const mapDispatchToProps = dispatch => ({
-  addReview: (text, restaurantId) => dispatch({type: 'ADD_REVIEW', text: text, restaurantId: restaurantId}),
+  addReview: (text, restaurantId) => dispatch({type: 'ADD_REVIEW', review: {text: text, restaurantId: restaurantId}}),
   deleteRestaurant: id => dispatch({type: 'DELETE_REVIEW', id})
 })
 
