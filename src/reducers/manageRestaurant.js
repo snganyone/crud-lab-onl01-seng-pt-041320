@@ -21,7 +21,7 @@ export default function manageRestaurants(state = {
             const review = {
                 id: cuid(),
                 text: action.text,
-                RestaurantId: action.RestaurantId
+                restaurantId: action.restaurantId
             }
 
             return {...state, reviews: [...state.reviews, review]}

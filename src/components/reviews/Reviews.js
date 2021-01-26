@@ -2,7 +2,7 @@ import React from 'react';
 import Review from './Review';
 
 const Reviews = props => {
-  const assoc = props.reviews.filter(review => review.RestaurantId === props.RestaurantId);
+  const assoc = props.reviews.filter(review => review.restaurantId === props.restaurantId);
   //console.log(props.reviews);
 
   const reviewList = assoc.map((review, idx) => {
