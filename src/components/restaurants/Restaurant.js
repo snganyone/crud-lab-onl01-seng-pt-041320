@@ -4,7 +4,7 @@ import ReviewsContainer from '../../containers/ReviewsContainer';
 class Restaurant extends Component {
 
     handleDelete = () => {
-      this.props.delete(this.props.id);
+      this.props.deleteRestaurant(this.props.id);
     }
 
   render() {

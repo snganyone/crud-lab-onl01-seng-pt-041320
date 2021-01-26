@@ -3,7 +3,7 @@ import Restaurant from './Restaurant'
 
 const Restaurants = props => {
   return(
-    <div>{props.restaurants.map(restaurant => <Restaurant key={restaurant.id} restaurant={props.restaurants} delete={props.delete}/>)}</div>
+    <div>{props.restaurants.map(restaurant => <Restaurant key={restaurant.id} id={restaurant.id} restaurant={restaurant} deleteRestaurant={props.deleteRestaurant}/>)}</div>
   )
 }
 
