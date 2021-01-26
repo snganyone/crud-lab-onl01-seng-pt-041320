@@ -20,8 +20,8 @@ export default function manageRestaurants(state = {
             //console.log(action);
             const review = {
                 id: cuid(),
-                text: action.text,
-                restaurantId: action.restaurantId
+                text: action.review.text,
+                restaurantId: action.review.restaurantId
             }
 
             return {...state, reviews: [...state.reviews, review]}
