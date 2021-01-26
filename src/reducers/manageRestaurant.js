@@ -6,7 +6,6 @@ export default function manageRestaurants(state = {
 }, action) {
     switch(action.type){
         case 'ADD_RESTAURANT':
-
             const restaurant = {
             id: cuid(),
             text: action.text
@@ -18,9 +17,11 @@ export default function manageRestaurants(state = {
             return {...state, restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.id)}
 
         case 'ADD_REVIEW':
+            //console.log(action);
             const review = {
                 id: cuid(),
-                text: action.text
+                text: action.text,
+                RestaurantId: action.RestaurantId
             }
 
             return {...state, reviews: [...state.reviews, review]}

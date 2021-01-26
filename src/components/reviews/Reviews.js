@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Review from './Review';
 
 const Reviews = props => {
-  return(
-    <div>{props.reviews.map(review => <Review key={review.id} id={review.id} review={review} deleteRestaurant={props.deleteRestaurant}/>)}</div>
-  )
+  const assoc = props.reviews.filter(review => review.RestaurantId === props.RestaurantId);
+  //console.log(props.reviews);
+
+  const reviewList = assoc.map((review, idx) => {
+    return <Review key={review.id} review={review} deleteRestaurant={props.deleteRestaurant}/>
+  })
+
+  return(<div>{reviewList}</div>)
+  // return(
+  //   <div>{props.reviews.map(review => <Review key={review.id} id={review.id} review={review} deleteRestaurant={props.deleteRestaurant}/>)}</div>
+  // )
 }
 
 export default Reviews;
